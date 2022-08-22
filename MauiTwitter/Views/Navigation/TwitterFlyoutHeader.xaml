@@ -1,0 +1,39 @@
+<ContentView xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="MauiTwitter.Views.TwitterFlyoutHeader"
+             HeightRequest="200"
+             x:Name="FlyoutHeader">
+    <Grid BackgroundColor="White" Margin="15">
+        <Grid.RowDefinitions>
+            <RowDefinition Height=".4*"/>
+            <RowDefinition Height=".2*"/>
+            <RowDefinition Height=".2*"/>
+            <RowDefinition Height=".2*"/>
+            <RowDefinition Height=".1*"/>
+        </Grid.RowDefinitions>
+        <Image Grid.Row="0" Grid.Column="0" HeightRequest="50" WidthRequest="50" Source="https://pbs.twimg.com/profile_images/645601415973355521/No1ZTxyn_400x400.jpg" HorizontalOptions="Start">
+            <Image.Clip>
+                <EllipseGeometry 
+                                Center="25,25"
+                                RadiusX="25"
+                                RadiusY="25"/>
+            </Image.Clip>
+        </Image>
+        <Label Grid.Row="1" Grid.Column="0" Text="Siddharth Singh" FontFamily="RobatoBold" FontAttributes="Bold" FontSize="Medium"/>
+        <Label Grid.Row="2" Grid.Column="0" Text="@Sid_Singh89" FontFamily="RobatoRegular" FontSize="Small"/>
+        <Grid Grid.Row="3" Grid.Column="0">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width=".5*"/>
+                <ColumnDefinition Width=".5*"/>
+            </Grid.ColumnDefinitions>
+            <HorizontalStackLayout  Spacing="5" Grid.Row="0" Grid.Column="0">
+                <Label Text="196" FontAttributes="Bold" FontFamily="RobatoBold" FontSize="Small"/>
+                <Label Text="Followers" FontFamily="RobatoRegular" FontSize="Small"/>
+            </HorizontalStackLayout>
+            <HorizontalStackLayout Spacing="5"  Grid.Row="0" Grid.Column="1">
+                <Label Text="24" FontAttributes="Bold" FontFamily="RobatoBold" FontSize="Small"/>
+                <Label Text="Followers" FontFamily="RobatoRegular" FontSize="Small"/>
+            </HorizontalStackLayout>
+        </Grid>
+    </Grid>
+</ContentView>

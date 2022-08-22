@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentView xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="MauiTwitter.Views.TwitterFlyoutFooter">
+    <Grid VerticalOptions="EndAndExpand" Margin="10,10,10,20">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width=".5*"/>
+            <ColumnDefinition Width=".5*"/>
+        </Grid.ColumnDefinitions>       
+        <Image Grid.Row="0" Grid.Column ="0" HorizontalOptions="Start" HeightRequest ="25" WidthRequest="25" Source="lightbulb.png"/>
+        <Image Grid.Row="0" Grid.Column ="1" HorizontalOptions="End" HeightRequest ="25" WidthRequest="25" Source="qrcode.png"/>
+    </Grid>
+</ContentView>

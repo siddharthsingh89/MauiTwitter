@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<Shell
+    x:Class="MauiTwitter.AppShell"
+    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:views="clr-namespace:MauiTwitter.Views"
+    xmlns:utility ="clr-namespace:MauiTwitter.Utils"  
+    Shell.FlyoutBehavior="Flyout"    
+    >
+
+   
+    <Shell.FlyoutHeader>
+        <views:TwitterFlyoutHeader />
+    </Shell.FlyoutHeader>
+  
+    <Shell.TitleView>
+        <Grid ColumnDefinitions="*,*,*">
+            <Image Grid.Row="0" Grid.Column="1" HeightRequest="30" WidthRequest="30" Source="twitter.png" HorizontalOptions="Start"/>
+            <Image Grid.Row="0" Grid.Column="2" HeightRequest="30" WidthRequest="30" Source="stars.png" HorizontalOptions="End" Margin="0,0,10,0"/>
+
+        </Grid>
+    </Shell.TitleView>
+
+    <FlyoutItem Title ="Profile" FlyoutDisplayOptions="AsMultipleItems" >
+        <ShellContent Title="Topic" Icon="person.png" ContentTemplate="{DataTemplate views:MainPage}" />
+        <ShellContent Title="List"   Icon="cardlist.png" ContentTemplate="{DataTemplate views:MainPage} "/>
+        <ShellContent Title="Topics"   Icon="chattext.png" ContentTemplate="{DataTemplate views:MainPage}" />
+        <ShellContent Title="Bookmarks"  Icon="bookmark.png" ContentTemplate="{DataTemplate views:MainPage}" />
+        <ShellContent Title="Moments"    Icon="lightning.png" ContentTemplate="{DataTemplate views:MainPage}" />
+        <ShellContent Title="Monetization"   Icon="cashstack.png" ContentTemplate="{DataTemplate views:MainPage}" />
+        <ShellContent Title="New option"   Icon="cashstack.png" ContentTemplate="{DataTemplate views:MainPage}" />
+
+    </FlyoutItem>
+    
+    <MenuItem Text="Settings and Privacy"/>
+    <MenuItem Text="Help Center"/>
+
+   
+
+    <Shell.FlyoutFooter>
+        <views:TwitterFlyoutFooter />
+    </Shell.FlyoutFooter>
+
+</Shell>
